@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .box{
+        width: 300px;
+        height: 300px;
+        float: left;
+    }
+    .box:nth-child(1){
+        background-color: red;
+    }
+    .box:nth-child(2){
+        background-color: blue;
+
+    }
+    .box:nth-child(3){
+        background-color: hotpink;
+
+    }
+</style>
+<body>
+<div class="box"  onclick="console.log(this.style.display='none'); console.log(boxa); console.log(boxb)"></div>
+<div class="box"></div>
+<div class="box" onclick="console.log(boxa);"></div>
+<div class="box"></div>
+<div class="box"></div>
+<script>
+    let boxa=document.getElementsByTagName("div");
+    let boxb=document.querySelectorAll(".box");
+
+    boxa[1].onclick=function () {
+        this.remove();
+        console.log(boxa);
+        console.log(boxb);
+        console.log(this)
+    }
+
+</script>
+</body>
+</html>
