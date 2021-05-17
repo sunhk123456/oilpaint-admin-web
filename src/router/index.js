@@ -13,6 +13,8 @@ import Changepass from "../views/main/pass/Changepass";
 import Stayhomeadd from "../views/main/stayhome/Stayhomeadd";
 import Stayhomeindex from "../views/main/stayhome/Stayhomeindex";
 import Stayhomeedit from "../views/main/stayhome/Stayhomeedit";
+import MessageFeedback   from "../views/main/leaveMessage/Feedback";
+import MessageEdit from "../views/main/leaveMessage/Edit";
 import Echarts from "../views/main/echarts/Echarts"
 Vue.use(VueRouter)
 let router = new VueRouter({
@@ -75,6 +77,18 @@ let router = new VueRouter({
                     path: 'DetailAdd', component: DetailAdd, name: "DetailAdd"
                     , meta: {
                         auth: true, title: '添加detail'
+                    }
+                },
+                {
+                    path: 'MessageEdit', component: MessageEdit, name: "MessageEdit"
+                    , meta: {
+                        auth: true, title: '留言编辑'
+                    }
+                },
+                {
+                    path: 'MessageFeedback', component: MessageFeedback, name: "MessageFeedback"
+                    , meta: {
+                        auth: true, title: '留言反馈'
                     }
                 },
             ]

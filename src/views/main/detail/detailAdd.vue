@@ -265,7 +265,6 @@
                 // console.log("删除后的");
                 let url = file.response.imgURL;
                 this.bannerarr2 = this.bannerarr.filter(ele => ele != url);
-                console.log("bannerarr2",this.bannerarr2)
                 this.stayhomeform.desc = this.bannerarr2.join(',');
 
             },

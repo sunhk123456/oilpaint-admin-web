@@ -47,6 +47,55 @@
                             <router-link :to="{path:'/stayhomeindex'}">油漆的查看</router-link>
                         </el-menu-item>
                     </el-submenu>
+                    <el-submenu index="3">
+                        <template slot="title" >
+                            <i class="el-icon-location"></i>
+                            <span slot="title">油漆商品管理</span>
+                        </template>
+                        <el-menu-item>
+                            <router-link to="/detailadd"> 商品的添加</router-link>
+                        </el-menu-item>
+                        <!--                        <el-menu-item>-->
+                        <!--                            <router-link :to="{path:'/categoryindex'}"> 分类查看</router-link>-->
+                        <!--                        </el-menu-item>-->
+<!--                        <el-menu-item>-->
+<!--                            <router-link :to="{path:'/stayhomeindex'}">油漆的查看</router-link>-->
+<!--                        </el-menu-item>-->
+                    </el-submenu>
+                    <el-submenu index="4">
+                        <template slot="title" >
+                            <i class="el-icon-location"></i>
+                            <span slot="title">油漆留言模块</span>
+                        </template>
+                        <el-menu-item>
+                            <router-link to="/MessageFeedback"> 留言反馈</router-link>
+                        </el-menu-item>
+                        <el-menu-item>
+                            <router-link to="/MessageEdit"> 留言管理</router-link>
+                        </el-menu-item>
+                        <!--                        <el-menu-item>-->
+                        <!--                            <router-link :to="{path:'/categoryindex'}"> 分类查看</router-link>-->
+                        <!--                        </el-menu-item>-->
+                        <!--                        <el-menu-item>-->
+                        <!--                            <router-link :to="{path:'/stayhomeindex'}">油漆的查看</router-link>-->
+                        <!--                        </el-menu-item>-->
+                    </el-submenu>
+                    <el-submenu index="5">
+                        <template slot="title" >
+                            <i class="el-icon-location"></i>
+                            <span slot="title">用户管理</span>
+                        </template>
+                        <el-menu-item>
+                            <router-link to="/detailadd"> 用户编辑</router-link>
+                        </el-menu-item>
+
+                        <!--                        <el-menu-item>-->
+                        <!--                            <router-link :to="{path:'/categoryindex'}"> 分类查看</router-link>-->
+                        <!--                        </el-menu-item>-->
+                        <!--                        <el-menu-item>-->
+                        <!--                            <router-link :to="{path:'/stayhomeindex'}">油漆的查看</router-link>-->
+                        <!--                        </el-menu-item>-->
+                    </el-submenu>
                 </el-menu>
             </el-aside>
             <el-main>
