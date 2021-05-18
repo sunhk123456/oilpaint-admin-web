@@ -27,7 +27,7 @@
             <div class="block">
 
                 <el-pagination
-                        :current-page.sync="paginate.page"
+                        :cxxurrent-page.sync="paginate.page"
                         :page-size.sync="paginate.limit"
                         @current-change="handleCurrentChange"
                         layout="total, prev, pager, next, jumper"
