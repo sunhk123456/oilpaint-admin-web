@@ -8,5 +8,13 @@ function addMessage(id,params) {
         });
     });
     }
-
-export {addMessage};
+function deleteMessage(id) {
+    return new Promise((reslove,reject)=>{
+        instance.delete('api/LeaveMessage/'+id).then(res=>{
+            reslove(res)
+        }).catch(error=>{
+            reject(error)
+        });
+    });
+}
+export {addMessage,deleteMessage};

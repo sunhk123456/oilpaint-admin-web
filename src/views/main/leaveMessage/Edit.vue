@@ -19,13 +19,12 @@
                 </el-table-column>
                 <el-table-column prop="description" label="油漆描述">
                 </el-table-column>
+                <el-table-column prop="deal" label="管理员留言">
+                </el-table-column>
                 <el-table-column fixed="right" label="操作" width="100" prop="deal" >
                     <template slot-scope="scope">
-                        <el-button @click="handleEdit(scope.row.id)" v-if="!scope.row.deal" type="text" size="small" >添加留言</el-button>
-                        <div v-else> {{scope.row.deal}}
-                            <el-button @click="handleEdit(scope.row.id,scope.row.deal)" type="text" size="small"  >点击修改</el-button>
+                        <el-button @click="handleEdit(scope.row.id)"  type="text" size="small" >删除留言</el-button>
 
-                        </div>
                     </template>
                 </el-table-column>
             </el-table>
@@ -40,11 +39,10 @@
                 </el-pagination>
                 <el-popover
                         placement="top"
-                        width="460"
+                        width="260"
                         v-model="visible" style="position: fixed;top:200px;left:600px;z-index:201;">
-                    <h1>留言信息</h1>
+                    <h1>是否删除</h1>
                     <!--                    <p>这是一段内容这是一段内容确定删除吗？</p>-->
-                    <el-input type="textarea" :rows="2" v-model="dealMessage"></el-input>
                     <div style="text-align: right; margin: 0;padding-top:4px ">
                         <el-button size="mini" type="text" @click="visible = false">取消</el-button>
                         <el-button type="primary" size="mini" @click="changeMessage">确定</el-button>
@@ -60,7 +58,7 @@
 <script>
     import axios from 'axios';
     import {URL, SUCCESS} from "../../../lib/base";
-    import {addMessage} from "../../../http/Message";
+    import {deleteMessage} from "../../../http/Message";
 
     export default {
         name: "index",
@@ -165,8 +163,8 @@
             },
             changeMessage(){
 
-                addMessage(this.dealId,
-                    {deal:this.dealMessage}).then(
+                deleteMessage(this.dealId,
+                    ).then(
                     res=>{
                         console.log("1",res)
                         if (res.code===200){
@@ -182,6 +180,7 @@
                                 type: 'error'
                             });
                         }
+                        this.paginate.page=1;
                         this.initCategory();
 
                     }
