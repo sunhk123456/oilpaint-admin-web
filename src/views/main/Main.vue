@@ -32,21 +32,21 @@
                             <router-link :to="{path:'/categoryindex'}"> 导航查看</router-link>
                         </el-menu-item>
                     </el-submenu>
-                    <el-submenu index="2">
-                        <template slot="title" >
-                            <i class="el-icon-location"></i>
-                            <span slot="title">油漆分类的管理</span>
-                        </template>
-                        <el-menu-item>
-                            <router-link to="/stayhomeadd"> 油漆的添加</router-link>
-                        </el-menu-item>
+<!--                    <el-submenu index="2">-->
+<!--                        <template slot="title" >-->
+<!--                            <i class="el-icon-location"></i>-->
+<!--                            <span slot="title">油漆分类的管理</span>-->
+<!--                        </template>-->
 <!--                        <el-menu-item>-->
-<!--                            <router-link :to="{path:'/categoryindex'}"> 分类查看</router-link>-->
+<!--                            <router-link to="/stayhomeadd"> 油漆的添加</router-link>-->
 <!--                        </el-menu-item>-->
-                        <el-menu-item>
-                            <router-link :to="{path:'/stayhomeindex'}">油漆的查看</router-link>
-                        </el-menu-item>
-                    </el-submenu>
+<!--&lt;!&ndash;                        <el-menu-item>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <router-link :to="{path:'/categoryindex'}"> 分类查看</router-link>&ndash;&gt;-->
+<!--&lt;!&ndash;                        </el-menu-item>&ndash;&gt;-->
+<!--                        <el-menu-item>-->
+<!--                            <router-link :to="{path:'/stayhomeindex'}">油漆的查看</router-link>-->
+<!--                        </el-menu-item>-->
+<!--                    </el-submenu>-->
                     <el-submenu index="3">
                         <template slot="title" >
                             <i class="el-icon-location"></i>
@@ -86,7 +86,7 @@
                             <span slot="title">用户管理</span>
                         </template>
                         <el-menu-item>
-                            <router-link to="/detailadd"> 用户编辑</router-link>
+                            <router-link to="/userEdit"> 用户编辑</router-link>
                         </el-menu-item>
 
                         <!--                        <el-menu-item>-->
@@ -111,7 +111,9 @@
 <script>
     export default {
         name: "Main",
-
+        created() {
+            this.$router.push('/echarts')
+        }
 
     }
 </script>

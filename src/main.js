@@ -7,6 +7,8 @@ import axios from 'axios';
 import 'element-ui/lib/theme-chalk/index.css';
 import filter from "./filter/index"
 
+import moment from "vue-moment"
+Vue.use(moment);
 require("u-reset.css");
 Vue.config.productionTip = false
 Vue.use(ElementUI);

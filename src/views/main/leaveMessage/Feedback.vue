@@ -43,13 +43,11 @@
                         width="460"
                         v-model="visible" style="position: fixed;top:200px;left:600px;z-index:201;">
                    <h1>留言信息</h1>
-<!--                    <p>这是一段内容这是一段内容确定删除吗？</p>-->
                     <el-input type="textarea" :rows="2" v-model="dealMessage"></el-input>
                     <div style="text-align: right; margin: 0;padding-top:4px ">
                         <el-button size="mini" type="text" @click="visible = false">取消</el-button>
                         <el-button type="primary" size="mini" @click="changeMessage">确定</el-button>
                     </div>
-<!--                    <el-button slot="reference">删除</el-button>-->
                 </el-popover>
                 <div v-if="visible" style="background: #8c939d;position: absolute;height: 100%;top: 0;left: 0;width: 100%;opacity: 0.8;z-index: 100"></div>
             </div>

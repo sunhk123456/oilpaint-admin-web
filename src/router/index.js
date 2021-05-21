@@ -15,7 +15,9 @@ import Stayhomeindex from "../views/main/stayhome/Stayhomeindex";
 import Stayhomeedit from "../views/main/stayhome/Stayhomeedit";
 import MessageFeedback   from "../views/main/leaveMessage/Feedback";
 import MessageEdit from "../views/main/leaveMessage/Edit";
+import UserEdit from "../views/main/userEdit/Edit";
 import Echarts from "../views/main/echarts/Echarts"
+
 Vue.use(VueRouter)
 let router = new VueRouter({
     routes: [
@@ -89,6 +91,12 @@ let router = new VueRouter({
                     path: 'MessageFeedback', component: MessageFeedback, name: "MessageFeedback"
                     , meta: {
                         auth: true, title: '留言反馈'
+                    }
+                },
+                {
+                    path: 'UserEdit', component: UserEdit, name: "UserEdit"
+                    , meta: {
+                        auth: true, title: '前台用户管理'
                     }
                 },
             ]

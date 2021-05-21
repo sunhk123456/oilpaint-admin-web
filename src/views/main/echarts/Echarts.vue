@@ -8,7 +8,6 @@
 
 <script>
     import VcharLine from "v-charts/lib/line.common";
-
     export default {
         name: "Echarts",
         components:{
@@ -25,13 +24,30 @@
                 chartData: {
                     columns: ['日期', 'PV', 'Order'],
                     rows: [
-                        { '日期': '2018-05-22', 'PV': 32371, 'Order': 19810 },
-                        { '日期': '2018-05-23', 'PV': 12328, 'Order': 4398 },
-                        { '日期': '2018-05-24', 'PV': 92381, 'Order': 52910 }
+                        { '日期': this.$moment(new Date()).add(-15, 'days').format("YYYY-MM-DD"), 'PV':  Math.round(Math.random()*1000)+1000, 'Order':   Math.round(Math.random()*1000) },
+                        { '日期': this.$moment(new Date()).add(-14, 'days').format("YYYY-MM-DD"), 'PV':  Math.round(Math.random()*1000)+1000, 'Order':   Math.round(Math.random()*1000) },
+                        { '日期': this.$moment(new Date()).add(-13, 'days').format("YYYY-MM-DD"), 'PV':  Math.round(Math.random()*1000)+1000, 'Order':   Math.round(Math.random()*1000) },
+                        { '日期': this.$moment(new Date()).add(-12, 'days').format("YYYY-MM-DD"), 'PV':  Math.round(Math.random()*1000)+1000, 'Order':   Math.round(Math.random()*1000) },
+                        { '日期': this.$moment(new Date()).add(-11, 'days').format("YYYY-MM-DD"), 'PV':  Math.round(Math.random()*1000)+1000, 'Order':   Math.round(Math.random()*1000) },
+                        { '日期': this.$moment(new Date()).add(-10, 'days').format("YYYY-MM-DD"), 'PV':  Math.round(Math.random()*1000)+1000, 'Order':   Math.round(Math.random()*1000) },
+                        { '日期': this.$moment(new Date()).add(-9, 'days').format("YYYY-MM-DD"), 'PV':  Math.round(Math.random()*1000)+1000, 'Order':   Math.round(Math.random()*1000) },
+                        { '日期': this.$moment(new Date()).add(-8, 'days').format("YYYY-MM-DD"),'PV':  Math.round(Math.random()*1000)+1000, 'Order':   Math.round(Math.random()*1000) },
+                        { '日期': this.$moment(new Date()).add(-7, 'days').format("YYYY-MM-DD"),'PV':  Math.round(Math.random()*1000)+1000, 'Order':   Math.round(Math.random()*1000) },
+                        { '日期': this.$moment(new Date()).add(-6, 'days').format("YYYY-MM-DD"),'PV':  Math.round(Math.random()*1000)+1000, 'Order':   Math.round(Math.random()*1000) },
+                        { '日期': this.$moment(new Date()).add(-5, 'days').format("YYYY-MM-DD"),'PV':  Math.round(Math.random()*1000)+1000, 'Order':   Math.round(Math.random()*1000) },
+                        { '日期': this.$moment(new Date()).add(-4, 'days').format("YYYY-MM-DD"),'PV':  Math.round(Math.random()*1000)+1000, 'Order':   Math.round(Math.random()*1000) },
+                        { '日期': this.$moment(new Date()).add(-3, 'days').format("YYYY-MM-DD"),'PV':  Math.round(Math.random()*1000)+1000, 'Order':   Math.round(Math.random()*1000) },
+                        { '日期': this.$moment(new Date()).add(-2, 'days').format("YYYY-MM-DD"),'PV':  Math.round(Math.random()*1000)+1000, 'Order':   Math.round(Math.random()*1000) },
+                        { '日期': this.$moment(new Date()).add(-1, 'days').format("YYYY-MM-DD"),'PV':  Math.round(Math.random()*1000)+1000, 'Order':   Math.round(Math.random()*1000) },
+                        { '日期': this.$moment(new Date()).add(0, 'days').format("YYYY-MM-DD"), 'PV':  Math.round(Math.random()*1000)+1000, 'Order':   Math.round(Math.random()*1000) },
+
                     ]
                 },
 
             }
+        },
+        created() {
+            console.log(this.$moment(new Date()).add(1, 'days').format("YYYY-MM-DD"))
         }
     }
 </script>
